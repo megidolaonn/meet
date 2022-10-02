@@ -2,13 +2,13 @@
 
 This is an application that will show upcoming events for various cities using the Google Calendar API. The application will have the features listed below:
 
-FEATURE 1: FILTER EVENTS BY CITY
-As a user, I should be able to filter events by city, so that I can see the list of events that take place in that city.
-* Scenario 1: Given user hasn’t searched for any city, when the user opens the app, then the user should see a list of all upcoming events.
+FEATURE 1: FILTER EVENTS BY CITY. 
+As a user, I should be able to filter events by city, so that I can see the list of events that take place in that city.  
+* Scenario 1: Given user hasn’t searched for any city, when the user opens the app, then the user should see a list of all upcoming events
 * Scenario 2: Given the main page is open, when user starts typing in the city textbox, then the user should see a list of cities (suggestions) that match what they’ve typed.
 * Scenario 3: Given the user was typing “Berlin” in the city textbox and the list of suggested cities is showing, when the user selects a city (e.g., “Berlin, Germany”) from the list,then their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city.
 
-FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
+FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS. 
 As a user, I should be able to show or hide an event’s details, so that I can learn more about the events I’m interested in.
 * Scenario 1: Given the list of events has been loaded, when the user scrolls through the page, then each event element shown will be collapsed by default.
 * Scenario 2: Given the user hasn’t expanded an event, when the user clicks the “show details” button, then the event element will be expanded.
