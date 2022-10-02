@@ -1,6 +1,6 @@
 # meet
 
-This is an application that will show upcoming events for various cities using the Google Calendar API. The application will have the features listed below:
+### This is an application that will show upcoming events for various cities using the Google Calendar API. The application will have the features listed below:
 
 FEATURE 1: FILTER EVENTS BY CITY  
 As a user, I should be able to filter events by city, so that I can see the list of events that take place in that city.  
