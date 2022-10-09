@@ -4,7 +4,7 @@ import { mockData } from './mock-data';
 
 class EventList extends Component {
   render() {
-    const { events } = this.props;
+    //const { events } = this.props;
     const mockDataArray = mockData;
 
     return (
