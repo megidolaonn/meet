@@ -1,5 +1,4 @@
 const mockData = [
-
   {
     kind: "calendar#event",
     etag: "\"3181161784712000\"",
@@ -55,7 +54,6 @@ const mockData = [
     sequence: 0, reminders: { useDefault: true },
     eventType: "default"
   }
-
 ]
 
 export { mockData };
