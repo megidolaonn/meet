@@ -1,12 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Event from '../Event';
+import { mockData } from '../mock-data';
 
 describe('<Event /> component', () => {
 
-  let EventWrapper;
+  let event, EventWrapper;
   beforeAll(() => {
-    EventWrapper = shallow(<Event />);
+    event = mockData[0];
+
+    EventWrapper = shallow(<Event event={event} />);
   });
 
   test('render a button', () => {
@@ -28,9 +31,5 @@ describe('<Event /> component', () => {
     EventWrapper.find('.details-button').simulate('click');
     expect(EventWrapper.state('showMore')).toBe(false);
   });
-
-
-
-
 
 });
