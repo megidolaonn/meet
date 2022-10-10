@@ -19,9 +19,9 @@ class Event extends Component {
 
     return (
       <div>
-        <p>Sample date</p>
-        <b>Sample summary</b>
-        <p>Sample group</p>
+        <p>{event.start.dateTime}</p>
+        <b>{event.summary}</b>
+        <p>{event.organizer.email}</p>
         <i>x people are going</i>
         <div>
           {this.state.showMore ? moreInfo : ""}
