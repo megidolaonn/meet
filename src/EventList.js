@@ -10,7 +10,7 @@ class EventList extends Component {
     return (
       <ul className="EventList">
         {mockDataArray.map(event =>
-          <li key={event.id}>
+          <li className="event" key={event.id}>
             <Event event={event} />
           </li>
         )}
