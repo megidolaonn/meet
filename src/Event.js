@@ -25,7 +25,7 @@ class Event extends Component {
         <i>x people are going</i>
         <div>
           {this.state.showMore ? moreInfo : ""}
-          <button className="details-button" onClick={() => this.handleDetailsButton()}>
+          <button className="details-btn" onClick={() => this.handleDetailsButton()}>
             {this.state.showMore ? "Hide" : "Details"}
           </button>
         </div>
