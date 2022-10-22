@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import Event from './Event';
-import { mockData } from './mock-data';
 
 class EventList extends Component {
   render() {
-    //const { events } = this.props;
-    const mockDataArray = mockData;
+    const { events } = this.props;
 
     return (
       <ul className="EventList">
-        {mockDataArray.map(event =>
+        {events.map(event =>
           <li className="event" key={event.id}>
             <Event event={event} />
           </li>
