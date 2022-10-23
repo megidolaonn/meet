@@ -69,4 +69,34 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
+  //4.4 NumberOfEvents tests
+
+  test('App passes "numberOfEvents" state as a prop to NumberOfEvents', () => {
+    const AppWrapper = mount(<App />);
+    const AppLocationsState = AppWrapper.state('numberOfEvents');
+    expect(AppLocationsState).not.toEqual(undefined);
+    expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(AppLocationsState);
+    AppWrapper.unmount();
+  });
+
+  test('get a number of events matching user request', async () => {
+    const AppWrapper = mount(<App />);
+    const eventObject = { target: { value: 1 } };
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    await NumberOfEventsWrapper.instance().handleChange(eventObject);
+    await getEvents();
+    expect(AppWrapper.state('events')).toHaveLength(1);
+    AppWrapper.unmount();
+  });
+
+  test('get list of events matching the mockdata', async () => {
+    const AppWrapper = mount(<App />);
+    const eventObject = { target: { value: 1 } };
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    await NumberOfEventsWrapper.instance().handleChange(eventObject);
+    await getEvents();
+    expect(AppWrapper.state('events')).toEqual([mockData[0]]);
+    AppWrapper.unmount();
+  });
+
 });
