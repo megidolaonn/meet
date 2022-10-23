@@ -1,3 +1,4 @@
+//comment out import axios for testing
 import axios from 'axios';
 import { mockData } from './mock-data';
 import NProgress from 'nprogress';
@@ -25,7 +26,6 @@ export const getEvents = async () => {
     NProgress.done();
     return mockData;
   }
-
 
   const token = await getAccessToken();
 
