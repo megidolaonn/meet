@@ -24,7 +24,8 @@ class NumberOfEvents extends Component {
           min="1"
           max="32"
           value={this.state.numberOfEvents}
-          onChange={this.handleChange}>
+          onChange={this.handleChange}
+          onFocus={e => e.target.select()} >
         </input>
       </div>
     );
