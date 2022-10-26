@@ -5,8 +5,9 @@ import NumberOfEvents from '../NumberOfEvents';
 describe('<NumberOfEvents /> component', () => {
 
   let NumberOfEventsWrapper;
+
   beforeAll(() => {
-    NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+    NumberOfEventsWrapper = shallow(<NumberOfEvents updateEvents={() => { }} />);
   });
 
   test('render an input box', () => {
@@ -14,17 +15,17 @@ describe('<NumberOfEvents /> component', () => {
   });
 
   test('renders default 32 number input correctly', () => {
-    const eventNum = NumberOfEventsWrapper.state('eventNum');
+    const eventNum = NumberOfEventsWrapper.state('numberOfEvents');
     expect(NumberOfEventsWrapper.find('.event-number').prop('value')).toBe(eventNum);
   });
 
   test('change state when input changes', () => {
     NumberOfEventsWrapper.setState({
-      eventNum: 32
+      numberOfEvents: 32
     });
     const eventObject = { target: { value: 16 } };
     NumberOfEventsWrapper.find('.event-number').simulate('change', eventObject);
-    expect(NumberOfEventsWrapper.state('eventNum')).toBe(16);
+    expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(16);
   });
 
 });

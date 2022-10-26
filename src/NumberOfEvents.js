@@ -20,12 +20,12 @@ class NumberOfEvents extends Component {
       <div className='numberOfEvents'>
         <p>Number of Events (1-32):</p>
         <input
+          className="event-number"
           type="number"
           min="1"
           max="32"
           value={this.state.numberOfEvents}
-          onChange={this.handleChange}
-          onFocus={e => e.target.select()} >
+          onChange={this.handleChange} >
         </input>
       </div>
     );
