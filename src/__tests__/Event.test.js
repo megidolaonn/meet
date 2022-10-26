@@ -13,14 +13,14 @@ describe('<Event /> component', () => {
   });
 
   test('render a button', () => {
-    expect(EventWrapper.find('.details-button')).toHaveLength(1);
+    expect(EventWrapper.find('.details-btn')).toHaveLength(1);
   });
 
   test('click button to show more', () => {
     EventWrapper.setState({
       showMore: false
     });
-    EventWrapper.find('.details-button').simulate('click');
+    EventWrapper.find('.details-btn').simulate('click');
     expect(EventWrapper.state('showMore')).toBe(true);
   });
 
@@ -28,7 +28,7 @@ describe('<Event /> component', () => {
     EventWrapper.setState({
       showMore: true
     });
-    EventWrapper.find('.details-button').simulate('click');
+    EventWrapper.find('.details-btn').simulate('click');
     expect(EventWrapper.state('showMore')).toBe(false);
   });
 
