@@ -19,7 +19,7 @@ class CitySearch extends Component {
     if (suggestions.length === 0) {
       this.setState({
         query: value,
-        infoText: 'Matching city not found. Please choose from below or try another city.',
+        infoText: 'Matching city not found. Please choose from below or try another.',
       });
     } else {
       return this.setState({
