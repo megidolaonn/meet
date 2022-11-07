@@ -56,7 +56,9 @@ class NumberOfEvents extends Component {
           </input>
           <input type="submit" value="Submit"></input>
         </form>
-        <WarningAlert text={this.state.warningText} />
+        <div>
+          <WarningAlert text={this.state.warningText} />
+        </div>
       </div>
     );
   }
