@@ -68,7 +68,7 @@ class App extends Component {
         <h5 className='subheading'>Choose your nearest city</h5>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
-        <EventList events={this.state.events} updateEvents={this.updateEvents} />
+        <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       </div>
     );
