@@ -9,7 +9,7 @@ class EventList extends Component {
 
     return (
       <ul className="EventList">
-        {events.map(event =>
+        {events.slice(0, 32).map(event =>
           <li className="event" key={event.id}>
             <Event event={event} />
           </li>
