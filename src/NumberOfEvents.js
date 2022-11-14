@@ -5,8 +5,7 @@ class NumberOfEvents extends Component {
 
   state = {
     numberOfEvents: 32,
-    infoText: '',
-    warningText: ''
+    infoText: ''
   };
 
   handleChange = (event) => {
@@ -19,8 +18,7 @@ class NumberOfEvents extends Component {
     } else {
       this.setState({
         numberOfEvents: value,
-        infoText: '',
-        warningText: ''
+        infoText: ''
       });
     }
 
@@ -30,11 +28,11 @@ class NumberOfEvents extends Component {
     event.preventDefault();
     if (this.state.numberOfEvents < 1 || this.state.numberOfEvents > 32) {
       this.setState({
-        warningText: 'Unable to submit current selection.'
+        infoText: 'Unable to submit current selection.'
       });
     } else {
       this.setState({
-        warningText: ''
+        infoText: ''
       });
       this.props.updateEvents(undefined, this.state.numberOfEvents);
     }
@@ -55,7 +53,7 @@ class NumberOfEvents extends Component {
           <input type="submit" value="Submit"></input>
         </form>
         <div>
-          <WarningAlert text={this.state.warningText} />
+          <WarningAlert text={(navigator.onLine) ? '' : 'Offline. Loading cached events.'} />
         </div>
       </div>
     );
