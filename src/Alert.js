@@ -26,6 +26,14 @@ class InfoAlert extends Alert {
     super(props);
     this.color = 'blue';
   }
+
+  render() {
+    return (
+      <div className="InfoAlert">
+        <p style={this.getStyle()}>{this.props.text}</p>
+      </div>
+    );
+  }
 }
 
 class WarningAlert extends Alert {
@@ -33,12 +41,28 @@ class WarningAlert extends Alert {
     super(props);
     this.color = 'orange';
   }
+
+  render() {
+    return (
+      <div className="WarningAlert">
+        <p style={this.getStyle()}>{this.props.text}</p>
+      </div>
+    );
+  }
 }
 
 class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'red';
+  }
+
+  render() {
+    return (
+      <div className="ErrorAlert">
+        <p style={this.getStyle()}>{this.props.text}</p>
+      </div>
+    );
   }
 }
 

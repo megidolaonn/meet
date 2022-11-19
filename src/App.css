@@ -51,6 +51,7 @@ input[type="number"] {
   flex-direction: column;
   flex-basis: 300px;
   max-width: 600px;
+  padding-top: 16px;
   margin: auto;
   position: relative;
 }
@@ -61,7 +62,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 50px;
+  top: 54px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -122,10 +123,11 @@ input[type="number"] {
 
 .numberOfEvents {
   display: flex;
-  flex-direction: column;
   flex-basis: 300px;
+  flex-direction: column;
+  margin: 0px auto;
   max-width: 600px;
-  margin: 10px auto;
+  padding-bottom: 23px;
   position: relative;
 }
 
@@ -137,10 +139,28 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: relative;
-  font-size: x-small;
-  font-weight: bold;
+.InfoAlert {
+  position: absolute;
+  font-size: small;
+  font-weight: 700;
+  top: -7px;
+  left: 15%;
+}
+
+.WarningAlert {
+  font-size: small;
+  top: 81px;
+  position: absolute;
+  left: 33%;
+  font-weight: 700;
+}
+
+.ErrorAlert {
+  position: absolute;
+  top: 65px;
+  left: 32%;
+  font-size: small;
+  font-weight: 700;
 }
 
 .data-vis-wrapper {
