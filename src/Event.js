@@ -15,14 +15,18 @@ class Event extends Component {
   render() {
     const { event } = this.props;
 
-    const moreInfo = <p className='event__Details' >More sample information</p>
+    const moreInfo = <div>
+      <br></br>
+      <p>Event Description:</p>
+      <p className='event__Details' >{event.description}</p>
+    </div>
 
     return (
       <div>
-        <p>{event.start.dateTime}</p>
         <b>{event.summary}</b>
-        <p>{event.organizer.email}</p>
-        <i>x people are going</i>
+        <br></br>
+        <p>{event.start.dateTime}</p>
+        <p>Time zone: {event.start.timeZone}</p>
         <div>
           {this.state.showMore ? moreInfo : ""}
           <button className="details-btn" onClick={() => this.handleDetailsButton()}>
