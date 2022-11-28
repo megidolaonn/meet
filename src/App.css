@@ -144,7 +144,7 @@ input[type="number"] {
   font-size: small;
   font-weight: 700;
   top: -7px;
-  left: 15%;
+  left: 26%;
 }
 
 .WarningAlert {
@@ -247,5 +247,47 @@ input[type="number"] {
     max-width: 50%;
     min-width: auto;
     margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 600px) {
+  .ErrorAlert {
+    left: 30%;
+  }
+
+  .InfoAlert {
+    left: 24%;
+  }
+}
+
+@media all and (min-width: 401px) and (max-width: 500px) {
+  .ErrorAlert {
+    left: 26%;
+  }
+
+  .InfoAlert {
+    left: 18%;
+  }
+}
+
+@media all and (min-width: 301px) and (max-width: 400px) {
+  .ErrorAlert {
+    left: 20%;
+  }
+
+  .InfoAlert {
+    left: 10%;
+  }
+}
+
+@media all and (min-width: 200px) and (max-width: 300px) {
+  .ErrorAlert {
+    left: 10%;
+  }
+
+  .InfoAlert {
+    font-size: x-small;
+    top: -5px;
+    left: 8%;
   }
 }
