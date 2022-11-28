@@ -1,6 +1,5 @@
 # Meet App  
 
-## About:    
 ## This is an application that will show upcoming events for various cities using the Google Calendar API. The application will have the features listed below:  
 
 #### Filter Events by City     
